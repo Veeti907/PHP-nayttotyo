@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: white !important;
+  text-align: center;
+  
+  /* Tausta kuva + overlay */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('thumbs-up-for-bike-events.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* Fade-in animaatio */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* Fade-out kesto */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
